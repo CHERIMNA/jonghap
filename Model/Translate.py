@@ -18,7 +18,7 @@ class TranslateByApi :
     def translatePapago(self) :
 
         client_id = "e3OYwDXm_2XWrqMBwcYl" # 개발자센터에서 발급받은 Client ID 값
-        client_secret = "ejLsjNKgrz" # 개발자센터에서 발급받은 Client Secret 값
+        client_secret = "" # 개발자센터에서 발급받은 Client Secret 값
         encText = urllib.parse.quote(self.text)
         data = "source="+ self.sourceLang+"&target=" + self.targetLang +"&text=" + encText
         url = "https://openapi.naver.com/v1/papago/n2mt"
@@ -60,7 +60,7 @@ class TranslateByApi :
         target = self.targetLang
         
         url = 'https://dapi.kakao.com/v2/translation/translate'
-        headers = {'Authorization': 'KakaoAK aa8774cb2897f9f70d114ed89af46599'}
+        headers = {'Authorization': 'KakaoAK '}
         data = {'src_lang': source, 'target_lang': target, 'query': text}
         
         response = requests.post(url=url, headers=headers, data=data)
